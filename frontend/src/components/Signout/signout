@@ -1,0 +1,32 @@
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@chakra-ui/react';
+
+export const Signout = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Clear authentication tokens or user session data here
+    localStorage.removeItem('authToken');
+    // Add any additional session cleanup here
+
+    // Redirect to the sign-in page
+    navigate('/signin');
+  }, [navigate]);
+
+  return (
+    <Button
+      colorScheme="red"
+      onClick={() => {
+        // Clear authentication tokens or user session data here
+        localStorage.removeItem('authToken');
+        // Add any additional session cleanup here
+
+        // Redirect to the sign-in page
+        navigate('/signin');
+      }}
+    >
+      Sign out
+    </Button>
+  );
+};

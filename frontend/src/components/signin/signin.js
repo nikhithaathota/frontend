@@ -70,7 +70,7 @@ export const SignIn = () => {
               _hover={{ borderColor: 'teal.300' }}
               border="1px"
               borderColor="gray.300"
-              borderRadius="md"
+              borderRadius="md" 
               p={2}
               width="full"
               transition="border-color 0.2s ease, box-shadow 0.2s ease"
@@ -101,6 +101,7 @@ export const SignIn = () => {
           
             Sign In
           </Button>
+
         </Stack>
       </Box>
     </Box>
